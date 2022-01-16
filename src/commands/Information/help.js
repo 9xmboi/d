@@ -28,7 +28,7 @@ module.exports = {
     .setLabel("Vote")
     .setStyle("LINK")
     .setEmoji(`<:topgg:932339752923967589>`)
-    .setURL("https://top.gg/bot/920683372991361106/vote")
+    .setURL("https://top.gg/bot/920683372991361106/vote"),
 			);
 
           const mainPage = new MessageEmbed()
