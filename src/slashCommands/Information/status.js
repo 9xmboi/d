@@ -3,9 +3,9 @@ const moment = require("moment");
 require("moment-duration-format");
 
 module.exports = {
-    name: "status",
+    name: "stats",
     category: "Information",
-    aliases: [ "stats" , "Stats" ],
+    aliases: [ "status" , "Stats" ],
     description: "Show status bot",
     args: false,
     usage: "",
