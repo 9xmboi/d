@@ -17,7 +17,7 @@ module.exports = {
         const player = message.client.manager.get(message.guild.id);
         if (!player.queue.current) {
             let thing = new MessageEmbed()
-                .setColor("RED")
+                .setColor("#ff0000")
                 .setDescription("There is no music playing.");
             return message.reply({ embeds: [thing] });
         }
@@ -57,46 +57,46 @@ module.exports = {
             if (b.customId === "clear_but") {
                 await player.clearEffects();
                 if (m) await m.edit({ embeds: [embed], components: [row, row2] });
-                return await b.editReply({ embeds: [embed1.setDescription(`${emojiequalizer} Equalizer mode is OFF`)] });
+                return await b.editReply({ embeds: [embed1.setDescription(`<a:filters:933987055292272682>**| Equalizer mode is OFF**`)] });
             } else if (b.customId === "bass_but") {
                 await player.setBassboost(true);
                 if (m) await m.edit({ embeds: [embed], components: [row, row2] });
-                return await b.editReply({ embeds: [embed1.setDescription(`${emojiequalizer} Bass mode is ON`)] });
+                return await b.editReply({ embeds: [embed1.setDescription(`<a:filters:933987055292272682>**| Bass mode is ON**`)] });
             } else if (b.customId === "night_but") {
                 await player.setNightcore(true);
                 if (m) await m.edit({ embeds: [embed], components: [row, row2] });
-                return await b.editReply({ embeds: [embed1.setDescription(`${emojiequalizer} Night Core mode is ON`)] });
+                return await b.editReply({ embeds: [embed1.setDescription(`<a:filters:933987055292272682>**| Night Core mode is ON**`)] });
             } else if (b.customId === "picth_but") {
                 await player.setPitch(2);
                 if (m) await m.edit({ embeds: [embed], components: [row, row2] });
-                return await b.editReply({ embeds: [embed1.setDescription(`${emojiequalizer} Pitch mode is ON`)] });
+                return await b.editReply({ embeds: [embed1.setDescription(`<a:filters:933987055292272682>**| Pitch mode is ON**`)] });
             } else if (b.customId === "distort_but") {
                 await player.setDistortion(true);
                 if (m) await m.edit({ embeds: [embed], components: [row, row2] });
-                return await b.editReply({ embeds: [embed1.setDescription(`${emojiequalizer} Distort mode is ON`)] });
+                return await b.editReply({ embeds: [embed1.setDescription(`<a:filters:933987055292272682>**| Distort mode is ON**`)] });
             } else if (b.customId === "eq_but") {
                 await player.setEqualizer(true);
                 if (m) await m.edit({ embeds: [embed], components: [row, row2] });
-                return await b.editReply({ embeds: [embed1.setDescription(`${emojiequalizer} Equalizer mode is ON`)] });
+                return await b.editReply({ embeds: [embed1.setDescription(`<a:filters:933987055292272682>**| Equalizer mode is ON**`)] });
             } else if (b.customId === "8d_but") {
                 await player.set8D(true);
                 if (m) await m.edit({ embeds: [embed], components: [row, row2] });
-                return await b.editReply({ embeds: [embed1.setDescription(`${emojiequalizer} 8D mode is ON`)] });
+                return await b.editReply({ embeds: [embed1.setDescription(`<a:filters:933987055292272682>**| 8D mode is ON**`)] });
             } else if (b.customId === "boost_but") {
                 var bands = new Array(7).fill(null).map((_, i) => (
                     { band: i, gain: 0.25 }
                 ));
                 await player.setEQ(...bands);
                 if (m) await m.edit({ embeds: [embed], components: [row, row2] });
-                return await b.editReply({ embeds: [embed1.setDescription(`${emojiequalizer} Bassboost mode is ON`)] });
+                return await b.editReply({ embeds: [embed1.setDescription(`<a:filters:933987055292272682>**| Bassboost mode is ON**`)] });
             } else if (b.customId === "speed_but") {
                 await player.setSpeed(2);
                 if (m) await m.edit({ embeds: [embed], components: [row, row2] });
-                return await b.editReply({ embeds: [embed1.setDescription(`${emojiequalizer} Speed mode is ON`)] });
+                return await b.editReply({ embeds: [embed1.setDescription(`<a:filters:933987055292272682>**| Speed mode is ON**`)] });
             } else if (b.customId === "vapo_but") {
                 await player.setVaporwave(true);
                 if (m) await m.edit({ embeds: [embed], components: [row, row2] });
-                return await b.editReply({ embeds: [embed1.setDescription(`${emojiequalizer} Vaporwave mode is ON`)] });
+                return await b.editReply({ embeds: [embed1.setDescription(`<a:filters:933987055292272682>**| Vaporwave mode is ON**`)] });
             }
         });
     }
