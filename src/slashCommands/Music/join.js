@@ -13,12 +13,12 @@ module.exports = {
     await interaction.deferReply({
       ephemeral: false
     });
-      if(!interaction.guild.me.permissions.has([Permissions.FLAGS.CONNECT, Permissions.FLAGS.SPEAK])) return interaction.editReply({embeds: [new MessageEmbed().setColor('#ff0000').setDescription(`I don't have enough permissions to execute this command! please give me permission \`CONNECT\` or \`SPEAK\`.`)]});
+      if(!interaction.guild.me.permissions.has([Permissions.FLAGS.CONNECT, Permissions.FLAGS.SPEAK])) return interaction.editReply({embeds: [new MessageEmbed().setColor(client.embedColor).setDescription(`I don't have enough permissions to execute this command! please give me permission \`CONNECT\` or \`SPEAK\`.`)]});
       const { channel } = interaction.member.voice;
-      if(!interaction.guild.me.permissionsIn(channel).has([Permissions.FLAGS.CONNECT, Permissions.FLAGS.SPEAK])) return interaction.editReply({embeds: [new MessageEmbed().setColor('#ff0000').setDescription(`I don't have enough permissions connect your vc please give me permission \`CONNECT\` or \`SPEAK\`.`)]});
-      if(!interaction.guild.me.permissions.has([Permissions.FLAGS.CONNECT, Permissions.FLAGS.SPEAK])) return interaction.editReply({embeds: [new MessageEmbed().setColor('#ff0000').setDescription(`I don't have enough permissions to execute this command.`)]});
-      if(!interaction.member.voice.channel) return interaction.editReply({embeds: [new MessageEmbed ().setColor('#ff0000').setDescription("You are not connect in vc")]});
-      if(interaction.guild.me.voice.channel && interaction.guild.me.voice.channelId !== interaction.member.voice.channelId) return interaction.editReply({embeds: [new MessageEmbed ().setColor('#ff0000').setDescription(`You are not connected to <#${interaction.guild.me.voice.channelId}> to use this command.`)]});
+      if(!interaction.guild.me.permissionsIn(channel).has([Permissions.FLAGS.CONNECT, Permissions.FLAGS.SPEAK])) return interaction.editReply({embeds: [new MessageEmbed().setColor(client.embedColor).setDescription(`I don't have enough permissions connect your vc please give me permission \`CONNECT\` or \`SPEAK\`.`)]});
+      if(!interaction.guild.me.permissions.has([Permissions.FLAGS.CONNECT, Permissions.FLAGS.SPEAK])) return interaction.editReply({embeds: [new MessageEmbed().setColor(client.embedColor).setDescription(`I don't have enough permissions to execute this command.`)]});
+      if(!interaction.member.voice.channel) return interaction.editReply({embeds: [new MessageEmbed ().setColor(client.embedColor).setDescription("You are not connect in vc")]});
+      if(interaction.guild.me.voice.channel && interaction.guild.me.voice.channelId !== interaction.member.voice.channelId) return interaction.editReply({embeds: [new MessageEmbed ().setColor(client.embedColor).setDescription(`You are not connected to <#${interaction.guild.me.voice.channelId}> to use this command.`)]});
 
     const emojiJoin = client.emoji.join;
 
@@ -36,18 +36,17 @@ module.exports = {
       player.connect();
      
       let thing = new MessageEmbed()
-        .setColor('#ff0000')
-        .setDescription(`<a:tick:919227918738133022>** | Join the voice channel**\nJoined <#${channel.id}> and bound to <#${message.channel.id}>`)
+        .setColor(client.embedColor)
+        .setDescription(`<a:tick:919227918738133022>** | Join the voice channel**\nJoined <#${channel.id}> and bound to <#${interaction.channel.id}>`)
       return interaction.editReply({ embeds: [thing] });
 
     } else if (interaction.guild.me.voice.channel !== channel) {
 
       let thing = new MessageEmbed()
-        .setColor('#ff0000')
+        .setColor("#ff0000")
         .setDescription(`You must be in the same channel as ${interaction.client.user}`);
       return interaction.editReply({ embeds: [thing] });
     }
 
   }
 };
-
