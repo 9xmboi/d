@@ -41,12 +41,12 @@ module.exports = {
     }).catch(() => {});
 
    player.setVolume(volume);   
-  if (volume > player.volume) return await interaction.editReply({embeds: [new MessageEmbed().setColor('#ff0000').setDescription(`<a:tick:919227918738133022>** | Volume set to:**`)]
+  if (volume > player.volume) return await interaction.editReply({embeds: [new MessageEmbed().setColor('#ff0000').setDescription(`<a:tick:919227918738133022>** | Volume set to:${volume}%**`)]
     }).catch(() => {});
-  else if (volume < player.volume) return await interaction.editReply({embeds: [new MessageEmbed().setColor('#ff0000').setDescription(`<a:tick:919227918738133022>** | Volume set to:**`)]
+  else if (volume < player.volume) return await interaction.editReply({embeds: [new MessageEmbed().setColor('#ff0000').setDescription(`<a:tick:919227918738133022>** | Volume set to:${volume}%**`)]
     }).catch(() => {});
    else 
-  await interaction.editReply({embeds: [new MessageEmbed().setColor('#ff0000').setDescription(`<a:tick:919227918738133022>** | Volume set to:**`)]
+  await interaction.editReply({embeds: [new MessageEmbed().setColor('#ff0000').setDescription(`<a:tick:919227918738133022>** | Volume set to:${volume}%**`)]
     }).catch(() => {});
    }
 			}
