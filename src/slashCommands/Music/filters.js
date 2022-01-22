@@ -71,7 +71,7 @@ module.exports = {
     const player = interaction.client.manager.get(interaction.guildId);
     if (!player.queue.current) {
       const thing = new MessageEmbed()
-        .setDescription('there is nothing playing')
+        .setDescription('There is nothing playing')
         .setColor(client.embedColor)
       return interaction.editReply({ embeds: [thing] });
      }
@@ -102,7 +102,7 @@ module.exports = {
             thing.setDescription(`<a:filters:933987055292272682>**| Night Core Equalizer mode is ON**`);
             break;
         case'pitch':   
-            player.setPitch(2); 
+            player.setPitch(true); 
             thing.setDescription(`<a:filters:933987055292272682>**| Pitch Equalizer mode is ON**`);
             break;
         case'distort':
@@ -111,18 +111,18 @@ module.exports = {
             break;
         case'vapo':
             player.setVaporwave(true); 
-            thing.setDescription(`<a:filters:933987055292272682>**| Vaporwave mode is ON**`);
+            thing.setDescription(`<a:filters:933987055292272682>**| Vaporwave Equalizer mode is ON**`);
             break;
         case 'clear': 
             player.clearEffects();
             thing.setDescription(`<a:filters:933987055292272682>**| Equalizer mode is OFF**`);
             break;
         case 'speed': 
-            player.setSpeed(2);
-            thing.setDescription(`<a:filters:933987055292272682>**| Speed mode is ON**`);
+            player.setSpeed(true);
+            thing.setDescription(`<a:filters:933987055292272682>**| Speed mode is OFF**`);
         case '8d': 
             player.set8D(true);
-            thing.setDescription(`<a:filters:933987055292272682>**| 8D mode is ON**`);
+            thing.setDescription(`<a:filters:933987055292272682>**| 8D mode is OFF**`);
         }
          return interaction.editReply({embeds: [thing]});
     }
