@@ -102,7 +102,7 @@ module.exports = {
             thing.setDescription(`<a:filters:933987055292272682>**| Night Core Equalizer mode is ON**`);
             break;
         case'pitch':   
-            player.setPitch(true); 
+            player.setPitch(); 
             thing.setDescription(`<a:filters:933987055292272682>**| Pitch Equalizer mode is ON**`);
             break;
         case'distort':
@@ -118,7 +118,7 @@ module.exports = {
             thing.setDescription(`<a:filters:933987055292272682>**| Equalizer mode is OFF**`);
             break;
         case 'speed': 
-            player.setSpeed(true);
+            player.setSpeed();
             thing.setDescription(`<a:filters:933987055292272682>**| Speed mode is OFF**`);
         case '8d': 
             player.set8D(true);
