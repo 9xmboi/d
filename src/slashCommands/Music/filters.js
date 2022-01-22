@@ -23,8 +23,8 @@ module.exports = {
                 value: "night"
             },
             {
-                name: "Picth",
-                value: "picth"
+                name: "Pitch",
+                value: "pitch"
             },
             {
                 name: "Distort",
@@ -88,7 +88,7 @@ module.exports = {
             break;
         case 'eq':   
             player.setEqualizer(true);
-            thing.setDescription(`<a:filters:933987055292272682>**| Trablebass mode is ON**`);
+            thing.setDescription(`<a:filters:933987055292272682>**| Equalizer mode is ON**`);
             break;
         case 'bassboost':
             var bands = new Array(7).fill(null).map((_, i) => (
@@ -102,7 +102,7 @@ module.exports = {
             thing.setDescription(`<a:filters:933987055292272682>**| Night Core Equalizer mode is ON**`);
             break;
         case'pitch':   
-            player.setPitch(); 
+            player.setPitch(2); 
             thing.setDescription(`<a:filters:933987055292272682>**| Pitch Equalizer mode is ON**`);
             break;
         case'distort':
@@ -118,8 +118,9 @@ module.exports = {
             thing.setDescription(`<a:filters:933987055292272682>**| Equalizer mode is OFF**`);
             break;
         case 'speed': 
-            player.setSpeed();
+            player.setSpeed(2);
             thing.setDescription(`<a:filters:933987055292272682>**| Speed mode is OFF**`);
+            break;
         case '8d': 
             player.set8D(true);
             thing.setDescription(`<a:filters:933987055292272682>**| 8D mode is OFF**`);
