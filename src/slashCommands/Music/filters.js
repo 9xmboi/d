@@ -119,11 +119,11 @@ module.exports = {
             break;
         case 'speed': 
             player.setSpeed(2);
-            thing.setDescription(`<a:filters:933987055292272682>**| Speed mode is OFF**`);
+            thing.setDescription(`<a:filters:933987055292272682>**| Speed mode is ON**`);
             break;
         case '8d': 
             player.set8D(true);
-            thing.setDescription(`<a:filters:933987055292272682>**| 8D mode is OFF**`);
+            thing.setDescription(`<a:filters:933987055292272682>**| 8D mode is ON**`);
         }
          return interaction.editReply({embeds: [thing]});
     }
