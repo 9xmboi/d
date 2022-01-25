@@ -26,7 +26,7 @@ module.exports = {
     new MessageButton()
      .setLabel("Server")
     .setStyle("LINK")
-    .setEmoji(`<:verifieds:932284744861884466>`)
+    .setEmoji(`<:verifieds:906992522163785768>`)
     .setURL("https://discord.gg/D6SFg5XHYu"),
     new MessageButton()
     .setLabel("Vote")
