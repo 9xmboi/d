@@ -44,7 +44,7 @@ module.exports = {
         let thing = new MessageEmbed()
             .setColor('#ff0000')
             .setTimestamp()
-            .setDescription(`<:pause:919236040470966273>** | Paused***\n[${song.title}](${song.uri})`)
+            .setDescription(`<:pause:919236040470966273>** | Paused**\n[${song.title}](${song.uri})`)
           return interaction.editReply({embeds: [thing]});
 	
     }
