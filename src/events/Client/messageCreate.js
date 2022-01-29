@@ -1,17 +1,15 @@
 const { MessageEmbed, Permissions } = require("discord.js");
-const db = require("../../schema/prefix.js");
+const pre= require("../../schema/prefix.js");
 
-module.exports = {
-    name: "messageCreate",
-    run: async (client, message) => {
+module.exports = async (client, message) => {
    
    if (message.author.bot) return;
    if (!message.guild) return;
     let prefix = client.prefix;
     const channel = message?.channel;
-    const ress =  await db.findOne({Guild: message.guildId})
-   if(ress && ress.Prefix)prefix = ress.Prefix;
-
+    const ress =  await pre.findOne({guildid: message.guild.id})
+   if(ress && ress.prefix)prefix = ress.prefix;
+   
     const mention = new RegExp(`^<@!?${client.user.id}>( |)$`);
     if (message.content.match(mention)) {
       const embed = new MessageEmbed()
@@ -19,10 +17,13 @@ module.exports = {
         .setDescription(`**› My prefix in this server is \`${prefix}\`**\n**› You can see my all commands type \`${prefix}\`help**`);
       message.channel.send({embeds: [embed]})
     };
-    const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+   const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
     const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(prefix)})\\s*`);
     if (!prefixRegex.test(message.content)) return;
+
     const [ matchedPrefix ] = message.content.match(prefixRegex);
+
     const args = message.content.slice(matchedPrefix.length).trim().split(/ +/);
     const commandName = args.shift().toLowerCase();
 
@@ -60,7 +61,7 @@ module.exports = {
         return channel.send({ content: `Error: I need \`EMBED_LINKS\` permission to work.` });
       }
     if (command.owner && message.author.id !== `${client.owner}`) {
-        embed.setDescription("Only <@933415227184263189> can use this command!");
+        embed.setDescription("Only <@531063766645997570> can use this command!");
         return message.channel.send({embeds: [embed]});
     }
 
@@ -93,4 +94,3 @@ module.exports = {
         return message.channel.send({embeds: [embed]});
     }
   }
-};
