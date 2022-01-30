@@ -50,6 +50,7 @@ module.exports = {
  .addField("<a:filter:919075030141390848>**Filters**",`\`\`\`\n Just Type +filters
  After Playing Any Song
 \`\`\``) 
+ .setDescription(`**Our Official [Website](http://ericamusic.c1.biz/) For Erica Music Bot**`) 
  .setFooter("Developed with ❤️ by ! Yuvraj⛓#4578")
  .setTimestamp()
            await interaction.followUp({embeds: [mainPage], components: [row]})
