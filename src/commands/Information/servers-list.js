@@ -19,8 +19,8 @@ execute: async (message, args, client, prefix, guildData, player) => {
             .setLabel("Next"),
         ]);
         let i0 = 0;
-        let i1 = 10;
-        let page = 200;
+        let i1 = 99;
+        let page = 1;
         let description =
           `Total Servers - ${client.guilds.cache.size}\n\n` +
           client.guilds.cache
