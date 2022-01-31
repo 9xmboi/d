@@ -138,5 +138,4 @@ execute: async (message, args, client, prefix, guildData, player) => {
         });
   }
 }
-slist.js
-5 KB
+
