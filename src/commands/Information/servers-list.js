@@ -19,7 +19,7 @@ execute: async (message, args, client, prefix, guildData, player) => {
             .setLabel("Next"),
         ]);
         let i0 = 0;
-        let i1 = 99;
+        let i1 = 10;
         let page = 1;
         let description =
           `Total Servers - ${client.guilds.cache.size}\n\n` +
@@ -32,7 +32,7 @@ execute: async (message, args, client, prefix, guildData, player) => {
                   r.id
                 }`
             )
-            .slice(0, 10)
+            .slice(0, 100)
             .join("\n");
 
         let embed = new MessageEmbed()
@@ -138,3 +138,5 @@ execute: async (message, args, client, prefix, guildData, player) => {
         });
   }
 }
+servers.js
+5 KB
