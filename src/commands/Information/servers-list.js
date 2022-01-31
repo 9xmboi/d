@@ -32,15 +32,15 @@ execute: async (message, args, client, prefix, guildData, player) => {
                   r.id
                 }`
             )
-            .slice(0, 100)
+            .slice(0, 10)
             .join("\n");
 
-          let embed = new MessageEmbed()
+        let embed = new MessageEmbed()
           .setColor("BLUE")
           .setTitle(
             `Page - ${page}/${Math.ceil(client.guilds.cache.size / 10)}`
           )
-          .setDescription(`${description}`);
+          .setDescription(description);
 
         let msg = await message.channel.send({
           embeds: [embed],
@@ -54,19 +54,19 @@ execute: async (message, args, client, prefix, guildData, player) => {
           if (btn.isButton()) {
             await btn.deferUpdate().catch((e) => {});
             if (btn.customId === "sr-back") {
-              i0 = i0 - 100;
-              i1 = i1 - 100;
+              i0 = i0 - 10;
+              i1 = i1 - 10;
               page = page - 1;
 
               // if there is no guild to display, delete the message
               if (i0 + 1 < 0) {
-                i0 = i0 + 100;
-                i1 = i1 + 100;
+                i0 = i0 + 10;
+                i1 = i1 + 10;
                 page = page + 1;
               }
               if (!i0 || !i1) {
-                i0 = i0 + 100;
-                i1 = i1 + 100;
+                i0 = i0 + 10;
+                i1 = i1 + 10;
                 page = page + 1;
               }
 
@@ -86,7 +86,7 @@ execute: async (message, args, client, prefix, guildData, player) => {
               embed
                 .setTitle(
                   `Page - ${page}/${Math.round(
-                    client.guilds.cache.size / 10
+                    client.guilds.cache.size / 10 + 1
                   )}`
                 )
                 .setDescription(description);
@@ -94,14 +94,14 @@ execute: async (message, args, client, prefix, guildData, player) => {
               // Edit the message
               msg.edit({ embeds: [embed] });
             } else if (btn.customId === "sr-next") {
-              i0 = i0 + 100;
-              i1 = i0 + 100;
+              i0 = i0 + 10;
+              i1 = i1 + 10;
               page = page + 1;
 
               // if there is no guild to display, delete the message
               if (i1 > client.guilds.cache.size + 10) {
-                i0 = i0 - 100;
-                i1 = i1 - 100;
+                i0 = i0 - 10;
+                i1 = i1 - 10;
                 page = page - 1;
               }
               if (!i0 || !i1) {
@@ -126,7 +126,8 @@ execute: async (message, args, client, prefix, guildData, player) => {
               embed
                 .setTitle(
                   `Page - ${page}/${Math.round(
-                    client.guilds.cache.size / 100)}`
+                    client.guilds.cache.size / 10 + 1
+                  )}`
                 )
                 .setDescription(description);
 
