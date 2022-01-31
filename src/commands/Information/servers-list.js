@@ -126,8 +126,7 @@ execute: async (message, args, client, prefix, guildData, player) => {
               embed
                 .setTitle(
                   `Page - ${page}/${Math.round(
-                    client.guilds.cache.size / 10 + 1
-                  )}`
+                    client.guilds.cache.size / 10)}`
                 )
                 .setDescription(description);
 
