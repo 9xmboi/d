@@ -77,7 +77,9 @@ execute: async (message, args, client, prefix, guildData, player) => {
                   .map((r) => r)
                   .map(
                     (r, i) =>
-                      `**${i + 1}** - ${r.name} | ${r.memberCount} Members`
+                      `**${i + 1}** - ${r.name} | ${r.memberCount} Members - ${
+                  r.id
+                }`
                   )
                   .slice(i0, i1)
                   .join("\n");
@@ -117,7 +119,9 @@ execute: async (message, args, client, prefix, guildData, player) => {
                   .map((r) => r)
                   .map(
                     (r, i) =>
-                      `**${i + 1}** - ${r.name} | ${r.memberCount} Members`
+                      `**${i + 1}** - ${r.name} | ${r.memberCount} Members - ${
+                  r.id
+                }`
                   )
                   .slice(i0, i1)
                   .join("\n");
@@ -138,4 +142,3 @@ execute: async (message, args, client, prefix, guildData, player) => {
         });
   }
 }
-
