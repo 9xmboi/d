@@ -40,7 +40,7 @@ module.exports = {
             let thing = new MessageEmbed()
                 .setColor(client.embedColor)
                 .setTimestamp()
-                .setDescription(`${emojireplay} Autoplay is now **enabled**`)
+                .setDescription(`<a:tick_em:937568217130471465>**| Autoplay is now enabled**`)
       return interaction.editReply({embeds: [thing]});
     } else {
 			player.set("autoplay", false);
@@ -48,7 +48,7 @@ module.exports = {
     let thing = new MessageEmbed()
         .setColor(client.embedColor)
         .setTimestamp()
-        .setDescription(`${emojireplay} Autoplay is now **disabled**`)
+        .setDescription(`<a:tick_em:937568217130471465>**| Autoplay is now disabled**`)
        return interaction.editReply({embeds: [thing]});
 	
      }
