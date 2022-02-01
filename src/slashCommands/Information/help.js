@@ -43,7 +43,7 @@ module.exports = {
 .addField('<a:mod:919070155689054328>**Configuration**',` \`\`\`\n 24/7 , Setprefix \`\`\` `)
 .addField("<a:invite:919075032758648913>**Information**",`\`\`\`\n Help , Invite , Ping , Stats   \`\`\``)
 .addField("<a:music:919075029927473154>**Music**",`\`\`\`\n Autoplay , Clearqueue , Join ,
- Loop , Lyrics , Nowplaying , Pause ,
+ Loop , Grab , Nowplaying , Pause ,
  Play , Queue , Remove , Resume ,
  Seek , Shuffle , Skip , Skipto ,
  Stop , Leave , Volume , Search , \`\`\` `)
