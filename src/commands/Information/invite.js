@@ -17,7 +17,7 @@ module.exports = {
         new MessageButton()
     .setLabel("Erica")
     .setStyle("LINK")
-    .setURL(`https://discord.com/oauth2/authorize?client_id=920683372991361106&permissions=431375642593&scope=applications.commands%20bot`),
+    .setURL(`https://discord.com/oauth2/authorize?client_id=938473008551575552&permissions=431375642593&scope=applications.commands%20bot`),
 			new MessageButton()
     .setLabel("Erica 2")
     .setStyle("LINK")
