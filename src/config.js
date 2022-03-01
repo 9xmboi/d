@@ -10,11 +10,11 @@ module.exports = {
 
     nodes: {
      
-      host: "lavalink-2.gangasagarcom.repl.co",
+      host: "lavalink.islantay.tk",
       id: "lavalink 4",
-      port: 443,
-      password: "LAVA",
-      secure: true
+      port: 8880,
+      password: "waifufufufu",
+      secure: false
     
     },
  
