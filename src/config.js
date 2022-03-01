@@ -8,8 +8,8 @@ module.exports = {
     embedColor: process.env.COlOR || "#303236", // embed colour
     logs: process.env.LOGS || "875254787191504947", // channel id for guild create and delete logs 
 
-    nodes: [
-    { 
+    nodes: {
+     
       host: "lavalink.islantay.tk",
       id: "lavalink 4",
       port: 8880,
@@ -17,12 +17,12 @@ module.exports = {
       secure: false
     
     },
-    {
-        host: "losingtime.dpaste.org",
-        id: "lavalink 4",
-        port: 2124,
-        password: "SleepingOnTrains",
-        secure: false 
-      }
+ {
+    host: "losingtime.dpaste.org" ,
+    id: "lavalink 5"
+    port: 2124,
+    password: "SleepingOnTrains",
+    secure: false 
+    },   
  
-]
+}
