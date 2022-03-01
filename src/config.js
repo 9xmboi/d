@@ -16,13 +16,5 @@ module.exports = {
       password: "waifufufufu",
       secure: false
     
-    },
- {
-    host: "losingtime.dpaste.org" ,
-    id: "lavalink 5"
-    port: 2124,
-    password: "SleepingOnTrains",
-    secure: false 
-    },   
- 
+    };
 }
