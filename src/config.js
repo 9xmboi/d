@@ -10,10 +10,10 @@ module.exports = {
 
     nodes: {
      
-      host: "lavalink.islantay.tk",
-      id: "lavalink 4",
-      port: 8880,
-      password: "waifufufufu",
+      host: "node03.lavalink.eu",
+      id: "lavalink",
+      port: 2333,
+      password: "Raccoon",
       secure: false
     
     },
