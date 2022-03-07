@@ -84,46 +84,46 @@ module.exports = {
        
         case 'bass':
             player.setBassboost(true);
-            thing.setDescription(`<a:filters:933987055292272682>**| Bass mode is ON**`);
+            thing.setDescription(`<:filters:943550716902002719>**| Bass mode is ON**`);
             break;
         case 'eq':   
             player.setEqualizer(true);
-            thing.setDescription(`<a:filters:933987055292272682>**| Equalizer mode is ON**`);
+            thing.setDescription(`<:filters:943550716902002719>**| Equalizer mode is ON**`);
             break;
         case 'bassboost':
             var bands = new Array(7).fill(null).map((_, i) => (
                 { band: i, gain: 0.25 }
             ));
             player.setEQ(...bands);
-            thing.setDescription(`<a:filters:933987055292272682>**| Bassboost mode is ON**`);
+            thing.setDescription(`<:filters:943550716902002719>**| Bassboost mode is ON**`);
             break;
         case'night':    
             player.setNightcore(true);
-            thing.setDescription(`<a:filters:933987055292272682>**| Night Core Equalizer mode is ON**`);
+            thing.setDescription(`<:filters:943550716902002719>**| Night Core Equalizer mode is ON**`);
             break;
         case'pitch':   
             player.setPitch(2); 
-            thing.setDescription(`<a:filters:933987055292272682>**| Pitch Equalizer mode is ON**`);
+            thing.setDescription(`<:filters:943550716902002719>**| Pitch Equalizer mode is ON**`);
             break;
         case'distort':
             player.setDistortion(true); 
-            thing.setDescription(`<a:filters:933987055292272682>**| Distort Equalizer mode is ON**`);
+            thing.setDescription(`<:filters:943550716902002719>**| Distort Equalizer mode is ON**`);
             break;
         case'vapo':
             player.setVaporwave(true); 
-            thing.setDescription(`<a:filters:933987055292272682>**| Vaporwave Equalizer mode is ON**`);
+            thing.setDescription(`<:filters:943550716902002719>**| Vaporwave Equalizer mode is ON**`);
             break;
         case 'clear': 
             player.clearEffects();
-            thing.setDescription(`<a:filters:933987055292272682>**| Equalizer mode is OFF**`);
+            thing.setDescription(`<:filters:943550716902002719>**| Equalizer mode is OFF**`);
             break;
         case 'speed': 
             player.setSpeed(2);
-            thing.setDescription(`<a:filters:933987055292272682>**| Speed mode is ON**`);
+            thing.setDescription(`<:filters:943550716902002719>**| Speed mode is ON**`);
             break;
         case '8d': 
             player.set8D(true);
-            thing.setDescription(`<a:filters:933987055292272682>**| 8D mode is ON**`);
+            thing.setDescription(`<:filters:943550716902002719>**| 8D mode is ON**`);
         }
          return interaction.editReply({embeds: [thing]});
     }
