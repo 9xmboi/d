@@ -36,14 +36,14 @@ module.exports = {
             .setColor("#ff0000")
  .setAuthor("Help Menu Of Erica",client.user.displayAvatarURL())
  
-.addField('<a:mod:919070155689054328>**Configuration**',` \`\`\`\n 24/7 , Setprefix \`\`\` `)
-.addField("<a:invite:919075032758648913>**Information**",`\`\`\`\n Help , Invite , Ping , Stats   \`\`\``)
-.addField("<a:music:919075029927473154>**Music**",`\`\`\`\n Autoplay , Clearqueue , Join ,
+.addField('**Configuration**',` \`\`\`\n 24/7 , Setprefix \`\`\` `)
+.addField("**Information**",`\`\`\`\n Help , Invite , Ping , Stats   \`\`\``)
+.addField("**Music**",`\`\`\`\n Autoplay , Clearqueue , Join ,
  Loop , Grab , Nowplaying , Pause ,
  Play , Queue , Remove , Resume ,
  Seek , Shuffle , Skip , Skipto ,
  Stop , Leave , Volume , Search , \`\`\` `)
- .addField("<a:filter:919075030141390848>**Filters**",`\`\`\`\n Just Type +filters
+ .addField("**Filters**",`\`\`\`\n Just Type +filters
  After Playing Any Song
 \`\`\``) 
  .setDescription(`**Our Official [Website](http://ericamusic.c1.biz/) For Erica Music Bot**`) 
