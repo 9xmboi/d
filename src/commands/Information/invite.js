@@ -17,11 +17,11 @@ module.exports = {
         new MessageButton()
     .setLabel("Erica")
     .setStyle("LINK")
-    .setURL(`https://discord.com/oauth2/authorize?client_id=938473008551575552&permissions=431375642593&scope=applications.commands%20bot`),
+    .setURL(`https://discord.com/oauth2/authorize?client_id=938473008551575552&permissions=3525712&scope=bot`),
 			new MessageButton()
     .setLabel("Erica 2")
     .setStyle("LINK")
-    .setURL("https://discord.com/oauth2/authorize?client_id=920754819822657556&permissions=431375642593&scope=applications.commands%20bot"),
+    .setURL("https://discord.com/oauth2/authorize?client_id=938473008551575552&permissions=3525712&scope=bot"),
     new MessageButton()
     .setLabel("Support")
     .setStyle("LINK")
