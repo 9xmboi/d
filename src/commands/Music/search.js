@@ -5,7 +5,7 @@ module.exports = {
     name: "search",
     description: "search for a song from youtube",
     category: "Music",
-    aliases: [],
+    aliases: ["ps" , "PS" , "Ps"],
     usage: [`serach Never gonna give you up`],
     args: true,
     Permissions: [],
