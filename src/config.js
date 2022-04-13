@@ -10,11 +10,11 @@ module.exports = {
 
     nodes: {
      
-      host: "losingtime.dpaste.org",
+      host: "main.paras888.repl.co",
       id: "lavalink",
-      port: 2124,
-      password: "SleepingOnTrains",
-      secure: false
+      port: 443,
+      password: "youshallnotpass",
+      secure: true
     
     },
     
