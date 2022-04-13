@@ -14,7 +14,7 @@ module.exports = {
       id: "lavalink",
       port: 2333,
       password: "Raccoon",
-      secure: false
+      secure: true
     
     },
     
